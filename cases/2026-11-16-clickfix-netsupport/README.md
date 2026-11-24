@@ -40,16 +40,16 @@ T1189, T1204.004, T1059.001, T1027, T1105, T1059.006, T1027.003, T1219, T1571, T
 | [analysis/stages.md](analysis/stages.md) | Eight stages with the detection opportunity for each |
 | [analysis/decoded-config.md](analysis/decoded-config.md) | Stage-2 behaviour, carrier format, agent settings, client32.ini |
 | [iocs/](iocs/) | CSV, STIX 2.1 bundle and hash list |
-| [detections/suricata/](detections/suricata/) | Network rules, tested against the capture |
-| [detections/yara/](detections/yara/) | MP4 carrier rules, tested against 0909.mp4 |
-| [detections/sigma/](detections/sigma/) | Host rules, one per file |
+| detections/suricata/ | Network rules, tested against the capture. TODO to follow in a later PR |
+| detections/yara/ | MP4 carrier rules, tested against 0909.mp4. TODO to follow in a later PR |
+| detections/sigma/ | Host rules, one per file. TODO to follow in a later PR |
 | [detections/kql/](detections/kql/) | Microsoft Defender advanced hunting queries |
 | [detections/siem/](detections/siem/) | SIEM detection spec UC-01 to UC-07 |
 | [tests/](tests/) | Expected alert counts and the offline test runner |
-| [media/](media/) | Screenshots from the analysis |
+| media/ | Screenshots from the analysis. TODO to follow in a later PR |
 
 ## Links
 
-- Walkthrough with audio narration on [GitHub Pages](https://404secnotfound.github.io/PCAP-2-Detection/clickfix-netsupport/)
+- Walkthrough with audio narration on GitHub Pages. TODO to follow in a later PR
 - Medium article TODO
 - Original exercise by Brad Duncan on [malware-traffic-analysis.net](https://www.malware-traffic-analysis.net/2026/11/16/index.html)

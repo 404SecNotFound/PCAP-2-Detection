@@ -33,7 +33,7 @@ Every factual claim in an analysis file carries one of four labels.
 
 | Date | Title | ATT&CK techniques | Rules | Walkthrough |
 |---|---|---|---|---|
-| 2026-11-16 | [Unidentified ClickFix pushes NetSupport RAT](cases/2026-11-16-clickfix-netsupport/) | 11 | Suricata, YARA, Sigma, KQL, SIEM spec | [Walkthrough](https://404secnotfound.github.io/PCAP-2-Detection/clickfix-netsupport/) |
+| 2026-11-16 | [Unidentified ClickFix pushes NetSupport RAT](cases/2026-11-16-clickfix-netsupport/) | 11 | KQL, SIEM spec (Suricata, YARA and Sigma to follow) | Walkthrough to follow |
 
 ## Repository layout
 
