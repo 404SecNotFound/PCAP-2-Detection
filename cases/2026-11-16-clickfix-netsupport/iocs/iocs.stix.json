@@ -1,0 +1,1389 @@
+{
+  "type": "bundle",
+  "id": "bundle--bc91935c-2e8f-5a87-b22b-c22c7bfc6f79",
+  "objects": [
+    {
+      "type": "identity",
+      "id": "identity--f99f97bf-febe-59b8-a62f-f371ce965d3b",
+      "spec_version": "2.1",
+      "created": "2026-11-24T00:00:00.000Z",
+      "modified": "2026-11-24T00:00:00.000Z",
+      "name": "404SecurityNotFound",
+      "identity_class": "individual",
+      "description": "Personal research by DJR (404SecurityNotFound). Views and rules are my own and do not represent my employer."
+    },
+    {
+      "type": "malware",
+      "id": "malware--33272406-b5f6-5c3c-85e8-f3900b99dcd3",
+      "spec_version": "2.1",
+      "created": "2026-11-24T00:00:00.000Z",
+      "modified": "2026-11-24T00:00:00.000Z",
+      "created_by_ref": "identity--f99f97bf-febe-59b8-a62f-f371ce965d3b",
+      "name": "NetSupport RAT",
+      "is_family": true,
+      "malware_types": [
+        "remote-access-trojan"
+      ],
+      "description": "Abused NetSupport Manager client delivered by ClickFix. Case 2026-11-16-clickfix-netsupport",
+      "external_references": [
+        {
+          "source_name": "malware-traffic-analysis.net",
+          "description": "Original capture, exercise and notes by Brad Duncan",
+          "url": "https://www.malware-traffic-analysis.net/2026/11/16/index.html"
+        }
+      ]
+    },
+    {
+      "type": "infrastructure",
+      "id": "infrastructure--7f12f652-8648-52ce-b971-06dfe3c7c744",
+      "spec_version": "2.1",
+      "created": "2026-11-24T00:00:00.000Z",
+      "modified": "2026-11-24T00:00:00.000Z",
+      "created_by_ref": "identity--f99f97bf-febe-59b8-a62f-f371ce965d3b",
+      "name": "NetSupport gateway dasiiiitt.com / 93.152.209.36:443",
+      "infrastructure_types": [
+        "command-and-control"
+      ]
+    },
+    {
+      "type": "infrastructure",
+      "id": "infrastructure--8b0d5288-2429-5c63-9474-d65ccd08bcc8",
+      "spec_version": "2.1",
+      "created": "2026-11-24T00:00:00.000Z",
+      "modified": "2026-11-24T00:00:00.000Z",
+      "created_by_ref": "identity--f99f97bf-febe-59b8-a62f-f371ce965d3b",
+      "name": "Payload server anycheckgocap.com / 94.26.0.162",
+      "infrastructure_types": [
+        "hosting-malware"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--0ac29d31-7f61-5b88-8b27-7ac2a29d62e2",
+      "spec_version": "2.1",
+      "created": "2026-11-24T00:00:00.000Z",
+      "modified": "2026-11-24T00:00:00.000Z",
+      "created_by_ref": "identity--f99f97bf-febe-59b8-a62f-f371ce965d3b",
+      "name": "Drive-by Compromise",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1189",
+          "url": "https://attack.mitre.org/techniques/T1189/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--dad35bbc-1b64-5071-81e8-c6a22d516689",
+      "spec_version": "2.1",
+      "created": "2026-11-24T00:00:00.000Z",
+      "modified": "2026-11-24T00:00:00.000Z",
+      "created_by_ref": "identity--f99f97bf-febe-59b8-a62f-f371ce965d3b",
+      "name": "User Execution: Malicious Copy and Paste",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.004",
+          "url": "https://attack.mitre.org/techniques/T1204/004/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--9f91cde0-fdbe-564a-9f88-6297b8c961c2",
+      "spec_version": "2.1",
+      "created": "2026-11-24T00:00:00.000Z",
+      "modified": "2026-11-24T00:00:00.000Z",
+      "created_by_ref": "identity--f99f97bf-febe-59b8-a62f-f371ce965d3b",
+      "name": "Command and Scripting Interpreter: PowerShell",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1059.001",
+          "url": "https://attack.mitre.org/techniques/T1059/001/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--333bd7f2-1d11-5765-b436-1e7c6a7c859a",
+      "spec_version": "2.1",
+      "created": "2026-11-24T00:00:00.000Z",
+      "modified": "2026-11-24T00:00:00.000Z",
+      "created_by_ref": "identity--f99f97bf-febe-59b8-a62f-f371ce965d3b",
+      "name": "Obfuscated Files or Information",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027",
+          "url": "https://attack.mitre.org/techniques/T1027/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--c8480a2f-6278-5482-b793-26ca45d1d35b",
+      "spec_version": "2.1",
+      "created": "2026-11-24T00:00:00.000Z",
+      "modified": "2026-11-24T00:00:00.000Z",
+      "created_by_ref": "identity--f99f97bf-febe-59b8-a62f-f371ce965d3b",
+      "name": "Ingress Tool Transfer",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1105",
+          "url": "https://attack.mitre.org/techniques/T1105/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--99627312-529e-52a2-a5ba-b49ff378dc2f",
+      "spec_version": "2.1",
+      "created": "2026-11-24T00:00:00.000Z",
+      "modified": "2026-11-24T00:00:00.000Z",
+      "created_by_ref": "identity--f99f97bf-febe-59b8-a62f-f371ce965d3b",
+      "name": "Command and Scripting Interpreter: Python",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1059.006",
+          "url": "https://attack.mitre.org/techniques/T1059/006/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--7992d4d0-fde8-5964-afa5-cf1102796c4a",
+      "spec_version": "2.1",
+      "created": "2026-11-24T00:00:00.000Z",
+      "modified": "2026-11-24T00:00:00.000Z",
+      "created_by_ref": "identity--f99f97bf-febe-59b8-a62f-f371ce965d3b",
+      "name": "Obfuscated Files or Information: Steganography",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027.003",
+          "url": "https://attack.mitre.org/techniques/T1027/003/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--34f4f2fa-b86d-5dae-aaf1-dbf6c9895eba",
+      "spec_version": "2.1",
+      "created": "2026-11-24T00:00:00.000Z",
+      "modified": "2026-11-24T00:00:00.000Z",
+      "created_by_ref": "identity--f99f97bf-febe-59b8-a62f-f371ce965d3b",
+      "name": "Remote Access Tools",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1219",
+          "url": "https://attack.mitre.org/techniques/T1219/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--717d96c1-857b-5ab4-b894-40b77a760391",
+      "spec_version": "2.1",
+      "created": "2026-11-24T00:00:00.000Z",
+      "modified": "2026-11-24T00:00:00.000Z",
+      "created_by_ref": "identity--f99f97bf-febe-59b8-a62f-f371ce965d3b",
+      "name": "Non-Standard Port",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1571",
+          "url": "https://attack.mitre.org/techniques/T1571/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--bf3ba29a-8be0-5fe3-9d5a-08dcd8d740fc",
+      "spec_version": "2.1",
+      "created": "2026-11-24T00:00:00.000Z",
+      "modified": "2026-11-24T00:00:00.000Z",
+      "created_by_ref": "identity--f99f97bf-febe-59b8-a62f-f371ce965d3b",
+      "name": "Masquerading: Rename Legitimate Utilities",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.003",
+          "url": "https://attack.mitre.org/techniques/T1036/003/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--4faa64af-37e4-5cf0-bc71-154c593a1495",
+      "spec_version": "2.1",
+      "created": "2026-11-24T00:00:00.000Z",
+      "modified": "2026-11-24T00:00:00.000Z",
+      "created_by_ref": "identity--f99f97bf-febe-59b8-a62f-f371ce965d3b",
+      "name": "Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1547.001",
+          "url": "https://attack.mitre.org/techniques/T1547/001/"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "id": "indicator--8df1d57f-3189-535f-8113-404f029d5568",
+      "spec_version": "2.1",
+      "created": "2026-11-24T00:00:00.000Z",
+      "modified": "2026-11-24T00:00:00.000Z",
+      "created_by_ref": "identity--f99f97bf-febe-59b8-a62f-f371ce965d3b",
+      "name": "domain crownherliving[.]com",
+      "description": "compromised site that starts the chain. Evidence PCAP. LIVE value in pattern.",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'crownherliving.com']",
+      "pattern_type": "stix",
+      "valid_from": "2026-11-16T21:57:41.465Z",
+      "confidence": 50,
+      "external_references": [
+        {
+          "source_name": "malware-traffic-analysis.net",
+          "description": "Original capture, exercise and notes by Brad Duncan",
+          "url": "https://www.malware-traffic-analysis.net/2026/11/16/index.html"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "id": "indicator--11bd679c-4719-5056-b877-f78b69751a51",
+      "spec_version": "2.1",
+      "created": "2026-11-24T00:00:00.000Z",
+      "modified": "2026-11-24T00:00:00.000Z",
+      "created_by_ref": "identity--f99f97bf-febe-59b8-a62f-f371ce965d3b",
+      "name": "ipv4 66.223.49[.]89",
+      "description": "compromised site address. Evidence PCAP. LIVE value in pattern.",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[ipv4-addr:value = '66.223.49.89']",
+      "pattern_type": "stix",
+      "valid_from": "2026-11-16T21:57:41.465Z",
+      "confidence": 15,
+      "external_references": [
+        {
+          "source_name": "malware-traffic-analysis.net",
+          "description": "Original capture, exercise and notes by Brad Duncan",
+          "url": "https://www.malware-traffic-analysis.net/2026/11/16/index.html"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "id": "indicator--b84d47e3-01fb-5042-8290-ffd030d9fa56",
+      "spec_version": "2.1",
+      "created": "2026-11-24T00:00:00.000Z",
+      "modified": "2026-11-24T00:00:00.000Z",
+      "created_by_ref": "identity--f99f97bf-febe-59b8-a62f-f371ce965d3b",
+      "name": "domain bronkbuilder-website-assets.s3.us-east-2.amazonaws[.]com",
+      "description": "asset loaded by the compromised site. Evidence PCAP. LIVE value in pattern.",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'bronkbuilder-website-assets.s3.us-east-2.amazonaws.com']",
+      "pattern_type": "stix",
+      "valid_from": "2026-11-16T21:57:42.561Z",
+      "confidence": 15,
+      "external_references": [
+        {
+          "source_name": "malware-traffic-analysis.net",
+          "description": "Original capture, exercise and notes by Brad Duncan",
+          "url": "https://www.malware-traffic-analysis.net/2026/11/16/index.html"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "id": "indicator--c6269e7c-1bb2-5e8b-8a7e-aef627c56ab0",
+      "spec_version": "2.1",
+      "created": "2026-11-24T00:00:00.000Z",
+      "modified": "2026-11-24T00:00:00.000Z",
+      "created_by_ref": "identity--f99f97bf-febe-59b8-a62f-f371ce965d3b",
+      "name": "domain wuntred[.]com",
+      "description": "injected script host. Evidence PCAP. LIVE value in pattern.",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'wuntred.com']",
+      "pattern_type": "stix",
+      "valid_from": "2026-11-16T21:57:42.715Z",
+      "confidence": 85,
+      "external_references": [
+        {
+          "source_name": "malware-traffic-analysis.net",
+          "description": "Original capture, exercise and notes by Brad Duncan",
+          "url": "https://www.malware-traffic-analysis.net/2026/11/16/index.html"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "id": "indicator--18e82981-b852-58ba-825d-e6da455aab5b",
+      "spec_version": "2.1",
+      "created": "2026-11-24T00:00:00.000Z",
+      "modified": "2026-11-24T00:00:00.000Z",
+      "created_by_ref": "identity--f99f97bf-febe-59b8-a62f-f371ce965d3b",
+      "name": "ipv4 172.67.165[.]144",
+      "description": "injected script host address (shared CDN range). Evidence PCAP. LIVE value in pattern.",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[ipv4-addr:value = '172.67.165.144']",
+      "pattern_type": "stix",
+      "valid_from": "2026-11-16T21:57:42.715Z",
+      "confidence": 15,
+      "external_references": [
+        {
+          "source_name": "malware-traffic-analysis.net",
+          "description": "Original capture, exercise and notes by Brad Duncan",
+          "url": "https://www.malware-traffic-analysis.net/2026/11/16/index.html"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "id": "indicator--9040a06a-3a32-5192-afcb-ee084936509b",
+      "spec_version": "2.1",
+      "created": "2026-11-24T00:00:00.000Z",
+      "modified": "2026-11-24T00:00:00.000Z",
+      "created_by_ref": "identity--f99f97bf-febe-59b8-a62f-f371ce965d3b",
+      "name": "ipv4 104.21.42[.]198",
+      "description": "injected script host address (shared CDN range). Evidence PCAP. LIVE value in pattern.",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[ipv4-addr:value = '104.21.42.198']",
+      "pattern_type": "stix",
+      "valid_from": "2026-11-16T21:57:42.715Z",
+      "confidence": 15,
+      "external_references": [
+        {
+          "source_name": "malware-traffic-analysis.net",
+          "description": "Original capture, exercise and notes by Brad Duncan",
+          "url": "https://www.malware-traffic-analysis.net/2026/11/16/index.html"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "id": "indicator--c71f9697-bc64-5485-b63a-e5052529b3a2",
+      "spec_version": "2.1",
+      "created": "2026-11-24T00:00:00.000Z",
+      "modified": "2026-11-24T00:00:00.000Z",
+      "created_by_ref": "identity--f99f97bf-febe-59b8-a62f-f371ce965d3b",
+      "name": "domain adsmanagertgo[.]click",
+      "description": "lure loader kyc2.js host. Evidence PCAP. LIVE value in pattern.",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'adsmanagertgo.click']",
+      "pattern_type": "stix",
+      "valid_from": "2026-11-16T21:57:43.325Z",
+      "confidence": 85,
+      "external_references": [
+        {
+          "source_name": "malware-traffic-analysis.net",
+          "description": "Original capture, exercise and notes by Brad Duncan",
+          "url": "https://www.malware-traffic-analysis.net/2026/11/16/index.html"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "id": "indicator--768961d0-831d-5a3a-a068-7840e406361f",
+      "spec_version": "2.1",
+      "created": "2026-11-24T00:00:00.000Z",
+      "modified": "2026-11-24T00:00:00.000Z",
+      "created_by_ref": "identity--f99f97bf-febe-59b8-a62f-f371ce965d3b",
+      "name": "ipv4 104.21.45[.]172",
+      "description": "lure loader address (shared CDN range). Evidence PCAP. LIVE value in pattern.",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[ipv4-addr:value = '104.21.45.172']",
+      "pattern_type": "stix",
+      "valid_from": "2026-11-16T21:57:43.325Z",
+      "confidence": 15,
+      "external_references": [
+        {
+          "source_name": "malware-traffic-analysis.net",
+          "description": "Original capture, exercise and notes by Brad Duncan",
+          "url": "https://www.malware-traffic-analysis.net/2026/11/16/index.html"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "id": "indicator--7950c41f-0885-59e6-9bd3-160bc6140d25",
+      "spec_version": "2.1",
+      "created": "2026-11-24T00:00:00.000Z",
+      "modified": "2026-11-24T00:00:00.000Z",
+      "created_by_ref": "identity--f99f97bf-febe-59b8-a62f-f371ce965d3b",
+      "name": "ipv4 172.67.217[.]8",
+      "description": "lure loader address (shared CDN range). Evidence PCAP. LIVE value in pattern.",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[ipv4-addr:value = '172.67.217.8']",
+      "pattern_type": "stix",
+      "valid_from": "2026-11-16T21:57:43.325Z",
+      "confidence": 15,
+      "external_references": [
+        {
+          "source_name": "malware-traffic-analysis.net",
+          "description": "Original capture, exercise and notes by Brad Duncan",
+          "url": "https://www.malware-traffic-analysis.net/2026/11/16/index.html"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "id": "indicator--cab1446a-4ad1-5db6-8d3a-255f8e4aac02",
+      "spec_version": "2.1",
+      "created": "2026-11-24T00:00:00.000Z",
+      "modified": "2026-11-24T00:00:00.000Z",
+      "created_by_ref": "identity--f99f97bf-febe-59b8-a62f-f371ce965d3b",
+      "name": "domain adsmanagerast[.]pro",
+      "description": "fake CAPTCHA backend and click check-in host. Evidence PCAP. LIVE value in pattern.",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'adsmanagerast.pro']",
+      "pattern_type": "stix",
+      "valid_from": "2026-11-16T21:57:44.247Z",
+      "confidence": 85,
+      "external_references": [
+        {
+          "source_name": "malware-traffic-analysis.net",
+          "description": "Original capture, exercise and notes by Brad Duncan",
+          "url": "https://www.malware-traffic-analysis.net/2026/11/16/index.html"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "id": "indicator--879e3797-d7a1-57e9-b7f9-7a3f3f2b50f6",
+      "spec_version": "2.1",
+      "created": "2026-11-24T00:00:00.000Z",
+      "modified": "2026-11-24T00:00:00.000Z",
+      "created_by_ref": "identity--f99f97bf-febe-59b8-a62f-f371ce965d3b",
+      "name": "ipv4 104.21.35[.]159",
+      "description": "fake CAPTCHA backend address (shared CDN range). Evidence PCAP. LIVE value in pattern.",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[ipv4-addr:value = '104.21.35.159']",
+      "pattern_type": "stix",
+      "valid_from": "2026-11-16T21:57:44.247Z",
+      "confidence": 15,
+      "external_references": [
+        {
+          "source_name": "malware-traffic-analysis.net",
+          "description": "Original capture, exercise and notes by Brad Duncan",
+          "url": "https://www.malware-traffic-analysis.net/2026/11/16/index.html"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "id": "indicator--4cb6d5c8-e619-5271-a12c-158752b57a6f",
+      "spec_version": "2.1",
+      "created": "2026-11-24T00:00:00.000Z",
+      "modified": "2026-11-24T00:00:00.000Z",
+      "created_by_ref": "identity--f99f97bf-febe-59b8-a62f-f371ce965d3b",
+      "name": "ipv4 172.67.177[.]159",
+      "description": "fake CAPTCHA backend address (shared CDN range). Evidence PCAP. LIVE value in pattern.",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[ipv4-addr:value = '172.67.177.159']",
+      "pattern_type": "stix",
+      "valid_from": "2026-11-16T21:57:44.247Z",
+      "confidence": 15,
+      "external_references": [
+        {
+          "source_name": "malware-traffic-analysis.net",
+          "description": "Original capture, exercise and notes by Brad Duncan",
+          "url": "https://www.malware-traffic-analysis.net/2026/11/16/index.html"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "id": "indicator--3d6a9c85-c92e-582b-87f9-0439cce18976",
+      "spec_version": "2.1",
+      "created": "2026-11-24T00:00:00.000Z",
+      "modified": "2026-11-24T00:00:00.000Z",
+      "created_by_ref": "identity--f99f97bf-febe-59b8-a62f-f371ce965d3b",
+      "name": "domain anycheckgocap[.]com",
+      "description": "stage-2 PowerShell host. Evidence PCAP. LIVE value in pattern.",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'anycheckgocap.com']",
+      "pattern_type": "stix",
+      "valid_from": "2026-11-16T21:59:33.709Z",
+      "confidence": 85,
+      "external_references": [
+        {
+          "source_name": "malware-traffic-analysis.net",
+          "description": "Original capture, exercise and notes by Brad Duncan",
+          "url": "https://www.malware-traffic-analysis.net/2026/11/16/index.html"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "id": "indicator--aec4cf72-202e-53ee-918a-9e416c2b8383",
+      "spec_version": "2.1",
+      "created": "2026-11-24T00:00:00.000Z",
+      "modified": "2026-11-24T00:00:00.000Z",
+      "created_by_ref": "identity--f99f97bf-febe-59b8-a62f-f371ce965d3b",
+      "name": "url hxxp://anycheckgocap[.]com/",
+      "description": "stage-2 PowerShell download. Evidence PCAP. LIVE value in pattern.",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[url:value = 'http://anycheckgocap.com/']",
+      "pattern_type": "stix",
+      "valid_from": "2026-11-16T21:59:33.709Z",
+      "confidence": 85,
+      "external_references": [
+        {
+          "source_name": "malware-traffic-analysis.net",
+          "description": "Original capture, exercise and notes by Brad Duncan",
+          "url": "https://www.malware-traffic-analysis.net/2026/11/16/index.html"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "id": "indicator--fe7b26dd-02fb-5587-9fe7-f80a00fe065d",
+      "spec_version": "2.1",
+      "created": "2026-11-24T00:00:00.000Z",
+      "modified": "2026-11-24T00:00:00.000Z",
+      "created_by_ref": "identity--f99f97bf-febe-59b8-a62f-f371ce965d3b",
+      "name": "ipv4 94.26.0[.]162",
+      "description": "payload server for stage 2 and the MP4 carrier. Evidence PCAP. LIVE value in pattern.",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[ipv4-addr:value = '94.26.0.162']",
+      "pattern_type": "stix",
+      "valid_from": "2026-11-16T21:59:33.709Z",
+      "confidence": 85,
+      "external_references": [
+        {
+          "source_name": "malware-traffic-analysis.net",
+          "description": "Original capture, exercise and notes by Brad Duncan",
+          "url": "https://www.malware-traffic-analysis.net/2026/11/16/index.html"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "id": "indicator--f9b127fe-d4d1-5eda-b700-25b300279fa8",
+      "spec_version": "2.1",
+      "created": "2026-11-24T00:00:00.000Z",
+      "modified": "2026-11-24T00:00:00.000Z",
+      "created_by_ref": "identity--f99f97bf-febe-59b8-a62f-f371ce965d3b",
+      "name": "url hxxp://94.26.0[.]162/0909.mp4",
+      "description": "MP4 carrier download. Evidence PCAP. LIVE value in pattern.",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[url:value = 'http://94.26.0.162/0909.mp4']",
+      "pattern_type": "stix",
+      "valid_from": "2026-11-16T21:59:38.329Z",
+      "confidence": 85,
+      "external_references": [
+        {
+          "source_name": "malware-traffic-analysis.net",
+          "description": "Original capture, exercise and notes by Brad Duncan",
+          "url": "https://www.malware-traffic-analysis.net/2026/11/16/index.html"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "id": "indicator--ebd9d4b4-5a7b-59a4-bfd2-725f2307164f",
+      "spec_version": "2.1",
+      "created": "2026-11-24T00:00:00.000Z",
+      "modified": "2026-11-24T00:00:00.000Z",
+      "created_by_ref": "identity--f99f97bf-febe-59b8-a62f-f371ce965d3b",
+      "name": "domain dasiiiitt[.]com",
+      "description": "NetSupport primary gateway. Evidence PCAP. LIVE value in pattern.",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'dasiiiitt.com']",
+      "pattern_type": "stix",
+      "valid_from": "2026-11-16T21:59:42.758Z",
+      "confidence": 85,
+      "external_references": [
+        {
+          "source_name": "malware-traffic-analysis.net",
+          "description": "Original capture, exercise and notes by Brad Duncan",
+          "url": "https://www.malware-traffic-analysis.net/2026/11/16/index.html"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "id": "indicator--cb4721df-421c-527a-8b9b-5983c6cb43d1",
+      "spec_version": "2.1",
+      "created": "2026-11-24T00:00:00.000Z",
+      "modified": "2026-11-24T00:00:00.000Z",
+      "created_by_ref": "identity--f99f97bf-febe-59b8-a62f-f371ce965d3b",
+      "name": "ipv4 93.152.209[.]36",
+      "description": "NetSupport C2 gateway on port 443 without TLS. Evidence PCAP. LIVE value in pattern.",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[ipv4-addr:value = '93.152.209.36']",
+      "pattern_type": "stix",
+      "valid_from": "2026-11-16T21:59:42.986Z",
+      "confidence": 85,
+      "external_references": [
+        {
+          "source_name": "malware-traffic-analysis.net",
+          "description": "Original capture, exercise and notes by Brad Duncan",
+          "url": "https://www.malware-traffic-analysis.net/2026/11/16/index.html"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "id": "indicator--b1c2cef4-bca8-54f4-a2b0-8ce1db96a217",
+      "spec_version": "2.1",
+      "created": "2026-11-24T00:00:00.000Z",
+      "modified": "2026-11-24T00:00:00.000Z",
+      "created_by_ref": "identity--f99f97bf-febe-59b8-a62f-f371ce965d3b",
+      "name": "url hxxp://93.152.209[.]36:443/fakeurl.htm",
+      "description": "NetSupport check-in URL. Evidence PCAP. LIVE value in pattern.",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[url:value = 'http://93.152.209.36:443/fakeurl.htm']",
+      "pattern_type": "stix",
+      "valid_from": "2026-11-16T21:59:42.986Z",
+      "confidence": 85,
+      "external_references": [
+        {
+          "source_name": "malware-traffic-analysis.net",
+          "description": "Original capture, exercise and notes by Brad Duncan",
+          "url": "https://www.malware-traffic-analysis.net/2026/11/16/index.html"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "id": "indicator--ebcefc6c-27c2-5803-b03b-cb0ba7c27c20",
+      "spec_version": "2.1",
+      "created": "2026-11-24T00:00:00.000Z",
+      "modified": "2026-11-24T00:00:00.000Z",
+      "created_by_ref": "identity--f99f97bf-febe-59b8-a62f-f371ce965d3b",
+      "name": "domain piuifoasf[.]com",
+      "description": "NetSupport secondary gateway (not contacted). Evidence Decoded. LIVE value in pattern.",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'piuifoasf.com']",
+      "pattern_type": "stix",
+      "valid_from": "2026-11-16T21:59:38.329Z",
+      "confidence": 50,
+      "external_references": [
+        {
+          "source_name": "malware-traffic-analysis.net",
+          "description": "Original capture, exercise and notes by Brad Duncan",
+          "url": "https://www.malware-traffic-analysis.net/2026/11/16/index.html"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "id": "indicator--d880c2c7-1596-5bc3-ac89-28fdfcd59c3b",
+      "spec_version": "2.1",
+      "created": "2026-11-24T00:00:00.000Z",
+      "modified": "2026-11-24T00:00:00.000Z",
+      "created_by_ref": "identity--f99f97bf-febe-59b8-a62f-f371ce965d3b",
+      "name": "user-agent NetSupport Manager/1.3",
+      "description": "NetSupport client check-in User-Agent. Evidence PCAP. LIVE value in pattern.",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[network-traffic:extensions.'http-request-ext'.request_header.'User-Agent' = 'NetSupport Manager/1.3']",
+      "pattern_type": "stix",
+      "valid_from": "2026-11-16T21:59:42.986Z",
+      "confidence": 85,
+      "external_references": [
+        {
+          "source_name": "malware-traffic-analysis.net",
+          "description": "Original capture, exercise and notes by Brad Duncan",
+          "url": "https://www.malware-traffic-analysis.net/2026/11/16/index.html"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "id": "indicator--b0c8c120-1e2a-57af-bc38-cf2e13eaf8da",
+      "spec_version": "2.1",
+      "created": "2026-11-24T00:00:00.000Z",
+      "modified": "2026-11-24T00:00:00.000Z",
+      "created_by_ref": "identity--f99f97bf-febe-59b8-a62f-f371ce965d3b",
+      "name": "sha256 5df712fea72f3c1ccb7847fa683eb62651d4fa78158a1059d654c9ee9b8e72d4",
+      "description": "stage-2 PowerShell script. Evidence Decoded. LIVE value in pattern.",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[file:hashes.'SHA-256' = '5df712fea72f3c1ccb7847fa683eb62651d4fa78158a1059d654c9ee9b8e72d4']",
+      "pattern_type": "stix",
+      "valid_from": "2026-11-16T21:59:33.709Z",
+      "confidence": 85,
+      "external_references": [
+        {
+          "source_name": "malware-traffic-analysis.net",
+          "description": "Original capture, exercise and notes by Brad Duncan",
+          "url": "https://www.malware-traffic-analysis.net/2026/11/16/index.html"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "id": "indicator--a293a77d-038e-5487-a07e-76831a76d41d",
+      "spec_version": "2.1",
+      "created": "2026-11-24T00:00:00.000Z",
+      "modified": "2026-11-24T00:00:00.000Z",
+      "created_by_ref": "identity--f99f97bf-febe-59b8-a62f-f371ce965d3b",
+      "name": "sha256 b5db2a004d8d90119add09c3ab222bf14b7207cf3cafe9d0e239453cc4f953e4",
+      "description": "0909.mp4 carrier. Evidence Decoded. LIVE value in pattern.",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[file:hashes.'SHA-256' = 'b5db2a004d8d90119add09c3ab222bf14b7207cf3cafe9d0e239453cc4f953e4']",
+      "pattern_type": "stix",
+      "valid_from": "2026-11-16T21:59:38.329Z",
+      "confidence": 85,
+      "external_references": [
+        {
+          "source_name": "malware-traffic-analysis.net",
+          "description": "Original capture, exercise and notes by Brad Duncan",
+          "url": "https://www.malware-traffic-analysis.net/2026/11/16/index.html"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "id": "indicator--77c02400-2251-5669-84bd-a6ae77f84e25",
+      "spec_version": "2.1",
+      "created": "2026-11-24T00:00:00.000Z",
+      "modified": "2026-11-24T00:00:00.000Z",
+      "created_by_ref": "identity--f99f97bf-febe-59b8-a62f-f371ce965d3b",
+      "name": "sha256 275e5b085534f64313b50cbdcb08ecd59c57d21c96bb937f140ee92a3d27f792",
+      "description": "MIseN.Exe renamed client32.exe. Evidence Decoded. LIVE value in pattern.",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[file:hashes.'SHA-256' = '275e5b085534f64313b50cbdcb08ecd59c57d21c96bb937f140ee92a3d27f792']",
+      "pattern_type": "stix",
+      "valid_from": "2026-11-16T21:59:38.329Z",
+      "confidence": 50,
+      "external_references": [
+        {
+          "source_name": "malware-traffic-analysis.net",
+          "description": "Original capture, exercise and notes by Brad Duncan",
+          "url": "https://www.malware-traffic-analysis.net/2026/11/16/index.html"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "id": "indicator--0c9825ee-8496-553c-aeb4-aed6b11f7efb",
+      "spec_version": "2.1",
+      "created": "2026-11-24T00:00:00.000Z",
+      "modified": "2026-11-24T00:00:00.000Z",
+      "created_by_ref": "identity--f99f97bf-febe-59b8-a62f-f371ce965d3b",
+      "name": "sha256 939ccc8c10168155012e3fc9b1562423aee5c42fab483c10deb49197ab112133",
+      "description": "LHQPT.iNI client32.ini for this campaign. Evidence Decoded. LIVE value in pattern.",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[file:hashes.'SHA-256' = '939ccc8c10168155012e3fc9b1562423aee5c42fab483c10deb49197ab112133']",
+      "pattern_type": "stix",
+      "valid_from": "2026-11-16T21:59:38.329Z",
+      "confidence": 85,
+      "external_references": [
+        {
+          "source_name": "malware-traffic-analysis.net",
+          "description": "Original capture, exercise and notes by Brad Duncan",
+          "url": "https://www.malware-traffic-analysis.net/2026/11/16/index.html"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "id": "indicator--21961558-d8d3-5570-a071-f0f96fa68fc7",
+      "spec_version": "2.1",
+      "created": "2026-11-24T00:00:00.000Z",
+      "modified": "2026-11-24T00:00:00.000Z",
+      "created_by_ref": "identity--f99f97bf-febe-59b8-a62f-f371ce965d3b",
+      "name": "sha256 e09980d1b1c508eb29d2931ac92f8d0a7e49ca5fe6ab6277fabf097a0b033b63",
+      "description": "nsm.lic licensee NSM1234. Evidence Decoded. LIVE value in pattern.",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[file:hashes.'SHA-256' = 'e09980d1b1c508eb29d2931ac92f8d0a7e49ca5fe6ab6277fabf097a0b033b63']",
+      "pattern_type": "stix",
+      "valid_from": "2026-11-16T21:59:38.329Z",
+      "confidence": 50,
+      "external_references": [
+        {
+          "source_name": "malware-traffic-analysis.net",
+          "description": "Original capture, exercise and notes by Brad Duncan",
+          "url": "https://www.malware-traffic-analysis.net/2026/11/16/index.html"
+        }
+      ]
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--5b816d83-55a9-57f4-9d7b-32e293d90120",
+      "spec_version": "2.1",
+      "created": "2026-11-24T00:00:00.000Z",
+      "modified": "2026-11-24T00:00:00.000Z",
+      "created_by_ref": "identity--f99f97bf-febe-59b8-a62f-f371ce965d3b",
+      "relationship_type": "uses",
+      "source_ref": "malware--33272406-b5f6-5c3c-85e8-f3900b99dcd3",
+      "target_ref": "infrastructure--7f12f652-8648-52ce-b971-06dfe3c7c744"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--6985e397-f507-5f05-9b41-6217fb5968ff",
+      "spec_version": "2.1",
+      "created": "2026-11-24T00:00:00.000Z",
+      "modified": "2026-11-24T00:00:00.000Z",
+      "created_by_ref": "identity--f99f97bf-febe-59b8-a62f-f371ce965d3b",
+      "relationship_type": "uses",
+      "source_ref": "malware--33272406-b5f6-5c3c-85e8-f3900b99dcd3",
+      "target_ref": "infrastructure--8b0d5288-2429-5c63-9474-d65ccd08bcc8"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a639d523-e361-5ff2-a66d-4c941ac38116",
+      "spec_version": "2.1",
+      "created": "2026-11-24T00:00:00.000Z",
+      "modified": "2026-11-24T00:00:00.000Z",
+      "created_by_ref": "identity--f99f97bf-febe-59b8-a62f-f371ce965d3b",
+      "relationship_type": "uses",
+      "source_ref": "malware--33272406-b5f6-5c3c-85e8-f3900b99dcd3",
+      "target_ref": "attack-pattern--0ac29d31-7f61-5b88-8b27-7ac2a29d62e2"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--905c7bdc-6897-5bbd-9643-01afee15631a",
+      "spec_version": "2.1",
+      "created": "2026-11-24T00:00:00.000Z",
+      "modified": "2026-11-24T00:00:00.000Z",
+      "created_by_ref": "identity--f99f97bf-febe-59b8-a62f-f371ce965d3b",
+      "relationship_type": "uses",
+      "source_ref": "malware--33272406-b5f6-5c3c-85e8-f3900b99dcd3",
+      "target_ref": "attack-pattern--dad35bbc-1b64-5071-81e8-c6a22d516689"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--72c30428-a21b-5207-af01-df44ada9c9df",
+      "spec_version": "2.1",
+      "created": "2026-11-24T00:00:00.000Z",
+      "modified": "2026-11-24T00:00:00.000Z",
+      "created_by_ref": "identity--f99f97bf-febe-59b8-a62f-f371ce965d3b",
+      "relationship_type": "uses",
+      "source_ref": "malware--33272406-b5f6-5c3c-85e8-f3900b99dcd3",
+      "target_ref": "attack-pattern--9f91cde0-fdbe-564a-9f88-6297b8c961c2"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--cd08a835-abe2-5751-a177-2df76fe2ab54",
+      "spec_version": "2.1",
+      "created": "2026-11-24T00:00:00.000Z",
+      "modified": "2026-11-24T00:00:00.000Z",
+      "created_by_ref": "identity--f99f97bf-febe-59b8-a62f-f371ce965d3b",
+      "relationship_type": "uses",
+      "source_ref": "malware--33272406-b5f6-5c3c-85e8-f3900b99dcd3",
+      "target_ref": "attack-pattern--333bd7f2-1d11-5765-b436-1e7c6a7c859a"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a65c5a42-7a60-513b-abca-04a0ef1ab1cb",
+      "spec_version": "2.1",
+      "created": "2026-11-24T00:00:00.000Z",
+      "modified": "2026-11-24T00:00:00.000Z",
+      "created_by_ref": "identity--f99f97bf-febe-59b8-a62f-f371ce965d3b",
+      "relationship_type": "uses",
+      "source_ref": "malware--33272406-b5f6-5c3c-85e8-f3900b99dcd3",
+      "target_ref": "attack-pattern--c8480a2f-6278-5482-b793-26ca45d1d35b"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f5bacf17-48bc-5ff8-a193-ef14ef5865c8",
+      "spec_version": "2.1",
+      "created": "2026-11-24T00:00:00.000Z",
+      "modified": "2026-11-24T00:00:00.000Z",
+      "created_by_ref": "identity--f99f97bf-febe-59b8-a62f-f371ce965d3b",
+      "relationship_type": "uses",
+      "source_ref": "malware--33272406-b5f6-5c3c-85e8-f3900b99dcd3",
+      "target_ref": "attack-pattern--99627312-529e-52a2-a5ba-b49ff378dc2f"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--68b12908-934e-569e-b6a3-808f0e0d62f3",
+      "spec_version": "2.1",
+      "created": "2026-11-24T00:00:00.000Z",
+      "modified": "2026-11-24T00:00:00.000Z",
+      "created_by_ref": "identity--f99f97bf-febe-59b8-a62f-f371ce965d3b",
+      "relationship_type": "uses",
+      "source_ref": "malware--33272406-b5f6-5c3c-85e8-f3900b99dcd3",
+      "target_ref": "attack-pattern--7992d4d0-fde8-5964-afa5-cf1102796c4a"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b3fee7d0-1f72-58f7-a6c5-b237297e8bd6",
+      "spec_version": "2.1",
+      "created": "2026-11-24T00:00:00.000Z",
+      "modified": "2026-11-24T00:00:00.000Z",
+      "created_by_ref": "identity--f99f97bf-febe-59b8-a62f-f371ce965d3b",
+      "relationship_type": "uses",
+      "source_ref": "malware--33272406-b5f6-5c3c-85e8-f3900b99dcd3",
+      "target_ref": "attack-pattern--34f4f2fa-b86d-5dae-aaf1-dbf6c9895eba"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--28b405cf-3c11-5b39-9071-c006286c0fb6",
+      "spec_version": "2.1",
+      "created": "2026-11-24T00:00:00.000Z",
+      "modified": "2026-11-24T00:00:00.000Z",
+      "created_by_ref": "identity--f99f97bf-febe-59b8-a62f-f371ce965d3b",
+      "relationship_type": "uses",
+      "source_ref": "malware--33272406-b5f6-5c3c-85e8-f3900b99dcd3",
+      "target_ref": "attack-pattern--717d96c1-857b-5ab4-b894-40b77a760391"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b0bc2e99-ca1f-5afc-8b76-055f06a25df0",
+      "spec_version": "2.1",
+      "created": "2026-11-24T00:00:00.000Z",
+      "modified": "2026-11-24T00:00:00.000Z",
+      "created_by_ref": "identity--f99f97bf-febe-59b8-a62f-f371ce965d3b",
+      "relationship_type": "uses",
+      "source_ref": "malware--33272406-b5f6-5c3c-85e8-f3900b99dcd3",
+      "target_ref": "attack-pattern--bf3ba29a-8be0-5fe3-9d5a-08dcd8d740fc"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--65797dec-16c2-53dd-acb9-24a32b9e309d",
+      "spec_version": "2.1",
+      "created": "2026-11-24T00:00:00.000Z",
+      "modified": "2026-11-24T00:00:00.000Z",
+      "created_by_ref": "identity--f99f97bf-febe-59b8-a62f-f371ce965d3b",
+      "relationship_type": "uses",
+      "source_ref": "malware--33272406-b5f6-5c3c-85e8-f3900b99dcd3",
+      "target_ref": "attack-pattern--4faa64af-37e4-5cf0-bc71-154c593a1495"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--03738385-7b70-5daf-bf5a-7f2762acee04",
+      "spec_version": "2.1",
+      "created": "2026-11-24T00:00:00.000Z",
+      "modified": "2026-11-24T00:00:00.000Z",
+      "created_by_ref": "identity--f99f97bf-febe-59b8-a62f-f371ce965d3b",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--8df1d57f-3189-535f-8113-404f029d5568",
+      "target_ref": "malware--33272406-b5f6-5c3c-85e8-f3900b99dcd3"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--6a1c070e-3919-5cc5-b9eb-6426f62f0637",
+      "spec_version": "2.1",
+      "created": "2026-11-24T00:00:00.000Z",
+      "modified": "2026-11-24T00:00:00.000Z",
+      "created_by_ref": "identity--f99f97bf-febe-59b8-a62f-f371ce965d3b",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--11bd679c-4719-5056-b877-f78b69751a51",
+      "target_ref": "malware--33272406-b5f6-5c3c-85e8-f3900b99dcd3"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--af51fe0c-2dcc-52c9-9e54-c6b87c539aa5",
+      "spec_version": "2.1",
+      "created": "2026-11-24T00:00:00.000Z",
+      "modified": "2026-11-24T00:00:00.000Z",
+      "created_by_ref": "identity--f99f97bf-febe-59b8-a62f-f371ce965d3b",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--b84d47e3-01fb-5042-8290-ffd030d9fa56",
+      "target_ref": "malware--33272406-b5f6-5c3c-85e8-f3900b99dcd3"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--6df73a49-8b67-55e6-8e51-2e674d7f7983",
+      "spec_version": "2.1",
+      "created": "2026-11-24T00:00:00.000Z",
+      "modified": "2026-11-24T00:00:00.000Z",
+      "created_by_ref": "identity--f99f97bf-febe-59b8-a62f-f371ce965d3b",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--c6269e7c-1bb2-5e8b-8a7e-aef627c56ab0",
+      "target_ref": "malware--33272406-b5f6-5c3c-85e8-f3900b99dcd3"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d21ceecb-d1b7-531c-b10c-debd4767acba",
+      "spec_version": "2.1",
+      "created": "2026-11-24T00:00:00.000Z",
+      "modified": "2026-11-24T00:00:00.000Z",
+      "created_by_ref": "identity--f99f97bf-febe-59b8-a62f-f371ce965d3b",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--18e82981-b852-58ba-825d-e6da455aab5b",
+      "target_ref": "malware--33272406-b5f6-5c3c-85e8-f3900b99dcd3"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--10f02f9b-b183-5ce8-8370-2ba8fed1ecdc",
+      "spec_version": "2.1",
+      "created": "2026-11-24T00:00:00.000Z",
+      "modified": "2026-11-24T00:00:00.000Z",
+      "created_by_ref": "identity--f99f97bf-febe-59b8-a62f-f371ce965d3b",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--9040a06a-3a32-5192-afcb-ee084936509b",
+      "target_ref": "malware--33272406-b5f6-5c3c-85e8-f3900b99dcd3"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ed96515b-6ebf-5639-96c7-0a5172bf5449",
+      "spec_version": "2.1",
+      "created": "2026-11-24T00:00:00.000Z",
+      "modified": "2026-11-24T00:00:00.000Z",
+      "created_by_ref": "identity--f99f97bf-febe-59b8-a62f-f371ce965d3b",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--c71f9697-bc64-5485-b63a-e5052529b3a2",
+      "target_ref": "malware--33272406-b5f6-5c3c-85e8-f3900b99dcd3"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--05ef4b2d-79e8-5c63-9519-5d1edaa3035d",
+      "spec_version": "2.1",
+      "created": "2026-11-24T00:00:00.000Z",
+      "modified": "2026-11-24T00:00:00.000Z",
+      "created_by_ref": "identity--f99f97bf-febe-59b8-a62f-f371ce965d3b",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--768961d0-831d-5a3a-a068-7840e406361f",
+      "target_ref": "malware--33272406-b5f6-5c3c-85e8-f3900b99dcd3"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--92018b12-2bb7-5e19-a6af-e758949dd50a",
+      "spec_version": "2.1",
+      "created": "2026-11-24T00:00:00.000Z",
+      "modified": "2026-11-24T00:00:00.000Z",
+      "created_by_ref": "identity--f99f97bf-febe-59b8-a62f-f371ce965d3b",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--7950c41f-0885-59e6-9bd3-160bc6140d25",
+      "target_ref": "malware--33272406-b5f6-5c3c-85e8-f3900b99dcd3"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--8040cc90-a9fd-5295-ae2e-54e7e2656d24",
+      "spec_version": "2.1",
+      "created": "2026-11-24T00:00:00.000Z",
+      "modified": "2026-11-24T00:00:00.000Z",
+      "created_by_ref": "identity--f99f97bf-febe-59b8-a62f-f371ce965d3b",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--cab1446a-4ad1-5db6-8d3a-255f8e4aac02",
+      "target_ref": "malware--33272406-b5f6-5c3c-85e8-f3900b99dcd3"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--71a05ab8-3675-53b6-8648-a6cdb040044f",
+      "spec_version": "2.1",
+      "created": "2026-11-24T00:00:00.000Z",
+      "modified": "2026-11-24T00:00:00.000Z",
+      "created_by_ref": "identity--f99f97bf-febe-59b8-a62f-f371ce965d3b",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--879e3797-d7a1-57e9-b7f9-7a3f3f2b50f6",
+      "target_ref": "malware--33272406-b5f6-5c3c-85e8-f3900b99dcd3"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d429378a-028b-5264-87cf-f90b6ba560a8",
+      "spec_version": "2.1",
+      "created": "2026-11-24T00:00:00.000Z",
+      "modified": "2026-11-24T00:00:00.000Z",
+      "created_by_ref": "identity--f99f97bf-febe-59b8-a62f-f371ce965d3b",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--4cb6d5c8-e619-5271-a12c-158752b57a6f",
+      "target_ref": "malware--33272406-b5f6-5c3c-85e8-f3900b99dcd3"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b0da2056-dc96-51a4-a451-55ac7a501ef3",
+      "spec_version": "2.1",
+      "created": "2026-11-24T00:00:00.000Z",
+      "modified": "2026-11-24T00:00:00.000Z",
+      "created_by_ref": "identity--f99f97bf-febe-59b8-a62f-f371ce965d3b",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--3d6a9c85-c92e-582b-87f9-0439cce18976",
+      "target_ref": "malware--33272406-b5f6-5c3c-85e8-f3900b99dcd3"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--7de093ae-1958-5c74-ad4e-0c049a66a8e3",
+      "spec_version": "2.1",
+      "created": "2026-11-24T00:00:00.000Z",
+      "modified": "2026-11-24T00:00:00.000Z",
+      "created_by_ref": "identity--f99f97bf-febe-59b8-a62f-f371ce965d3b",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--3d6a9c85-c92e-582b-87f9-0439cce18976",
+      "target_ref": "infrastructure--8b0d5288-2429-5c63-9474-d65ccd08bcc8"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b4bdba36-ed4c-5b9c-9fc6-49adaeaff4c1",
+      "spec_version": "2.1",
+      "created": "2026-11-24T00:00:00.000Z",
+      "modified": "2026-11-24T00:00:00.000Z",
+      "created_by_ref": "identity--f99f97bf-febe-59b8-a62f-f371ce965d3b",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--aec4cf72-202e-53ee-918a-9e416c2b8383",
+      "target_ref": "malware--33272406-b5f6-5c3c-85e8-f3900b99dcd3"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--96864659-711d-5fbc-aea6-966cab6476d7",
+      "spec_version": "2.1",
+      "created": "2026-11-24T00:00:00.000Z",
+      "modified": "2026-11-24T00:00:00.000Z",
+      "created_by_ref": "identity--f99f97bf-febe-59b8-a62f-f371ce965d3b",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--aec4cf72-202e-53ee-918a-9e416c2b8383",
+      "target_ref": "infrastructure--8b0d5288-2429-5c63-9474-d65ccd08bcc8"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1f366f9e-cac7-5398-a9a5-43af1d03466e",
+      "spec_version": "2.1",
+      "created": "2026-11-24T00:00:00.000Z",
+      "modified": "2026-11-24T00:00:00.000Z",
+      "created_by_ref": "identity--f99f97bf-febe-59b8-a62f-f371ce965d3b",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--fe7b26dd-02fb-5587-9fe7-f80a00fe065d",
+      "target_ref": "malware--33272406-b5f6-5c3c-85e8-f3900b99dcd3"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--874e48db-6f21-5a90-942a-e8ff82ae9269",
+      "spec_version": "2.1",
+      "created": "2026-11-24T00:00:00.000Z",
+      "modified": "2026-11-24T00:00:00.000Z",
+      "created_by_ref": "identity--f99f97bf-febe-59b8-a62f-f371ce965d3b",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--fe7b26dd-02fb-5587-9fe7-f80a00fe065d",
+      "target_ref": "infrastructure--8b0d5288-2429-5c63-9474-d65ccd08bcc8"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a02aa8f6-bf90-526e-9e9a-c29004e678a2",
+      "spec_version": "2.1",
+      "created": "2026-11-24T00:00:00.000Z",
+      "modified": "2026-11-24T00:00:00.000Z",
+      "created_by_ref": "identity--f99f97bf-febe-59b8-a62f-f371ce965d3b",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--f9b127fe-d4d1-5eda-b700-25b300279fa8",
+      "target_ref": "malware--33272406-b5f6-5c3c-85e8-f3900b99dcd3"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--01ac4dce-6425-5fd0-bc33-9983810234cd",
+      "spec_version": "2.1",
+      "created": "2026-11-24T00:00:00.000Z",
+      "modified": "2026-11-24T00:00:00.000Z",
+      "created_by_ref": "identity--f99f97bf-febe-59b8-a62f-f371ce965d3b",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--f9b127fe-d4d1-5eda-b700-25b300279fa8",
+      "target_ref": "infrastructure--8b0d5288-2429-5c63-9474-d65ccd08bcc8"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--5a1c0cfd-7f67-5545-ab3c-7680b7e169ad",
+      "spec_version": "2.1",
+      "created": "2026-11-24T00:00:00.000Z",
+      "modified": "2026-11-24T00:00:00.000Z",
+      "created_by_ref": "identity--f99f97bf-febe-59b8-a62f-f371ce965d3b",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--ebd9d4b4-5a7b-59a4-bfd2-725f2307164f",
+      "target_ref": "malware--33272406-b5f6-5c3c-85e8-f3900b99dcd3"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--8955e124-f0ac-5b36-b3ae-a8987adbfee3",
+      "spec_version": "2.1",
+      "created": "2026-11-24T00:00:00.000Z",
+      "modified": "2026-11-24T00:00:00.000Z",
+      "created_by_ref": "identity--f99f97bf-febe-59b8-a62f-f371ce965d3b",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--ebd9d4b4-5a7b-59a4-bfd2-725f2307164f",
+      "target_ref": "infrastructure--7f12f652-8648-52ce-b971-06dfe3c7c744"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--9281e09d-bf80-598c-b183-689ff1480eee",
+      "spec_version": "2.1",
+      "created": "2026-11-24T00:00:00.000Z",
+      "modified": "2026-11-24T00:00:00.000Z",
+      "created_by_ref": "identity--f99f97bf-febe-59b8-a62f-f371ce965d3b",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--cb4721df-421c-527a-8b9b-5983c6cb43d1",
+      "target_ref": "malware--33272406-b5f6-5c3c-85e8-f3900b99dcd3"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--5098d98f-a83b-53b9-bfb9-bcf8feea144f",
+      "spec_version": "2.1",
+      "created": "2026-11-24T00:00:00.000Z",
+      "modified": "2026-11-24T00:00:00.000Z",
+      "created_by_ref": "identity--f99f97bf-febe-59b8-a62f-f371ce965d3b",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--cb4721df-421c-527a-8b9b-5983c6cb43d1",
+      "target_ref": "infrastructure--7f12f652-8648-52ce-b971-06dfe3c7c744"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--7f555006-59ea-56a9-b5f3-0cdfa5a61715",
+      "spec_version": "2.1",
+      "created": "2026-11-24T00:00:00.000Z",
+      "modified": "2026-11-24T00:00:00.000Z",
+      "created_by_ref": "identity--f99f97bf-febe-59b8-a62f-f371ce965d3b",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--b1c2cef4-bca8-54f4-a2b0-8ce1db96a217",
+      "target_ref": "malware--33272406-b5f6-5c3c-85e8-f3900b99dcd3"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--25443b6b-7f7b-5c76-a15d-d660f9d3ff5b",
+      "spec_version": "2.1",
+      "created": "2026-11-24T00:00:00.000Z",
+      "modified": "2026-11-24T00:00:00.000Z",
+      "created_by_ref": "identity--f99f97bf-febe-59b8-a62f-f371ce965d3b",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--b1c2cef4-bca8-54f4-a2b0-8ce1db96a217",
+      "target_ref": "infrastructure--7f12f652-8648-52ce-b971-06dfe3c7c744"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--eabc9ce4-2f12-5a22-93db-e897b0d6c7b9",
+      "spec_version": "2.1",
+      "created": "2026-11-24T00:00:00.000Z",
+      "modified": "2026-11-24T00:00:00.000Z",
+      "created_by_ref": "identity--f99f97bf-febe-59b8-a62f-f371ce965d3b",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--ebcefc6c-27c2-5803-b03b-cb0ba7c27c20",
+      "target_ref": "malware--33272406-b5f6-5c3c-85e8-f3900b99dcd3"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--cb80a6ee-e771-5eed-8827-9f36599e42c5",
+      "spec_version": "2.1",
+      "created": "2026-11-24T00:00:00.000Z",
+      "modified": "2026-11-24T00:00:00.000Z",
+      "created_by_ref": "identity--f99f97bf-febe-59b8-a62f-f371ce965d3b",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--ebcefc6c-27c2-5803-b03b-cb0ba7c27c20",
+      "target_ref": "infrastructure--7f12f652-8648-52ce-b971-06dfe3c7c744"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--fd3a3c71-f121-5bdb-8176-fdf07ff30b16",
+      "spec_version": "2.1",
+      "created": "2026-11-24T00:00:00.000Z",
+      "modified": "2026-11-24T00:00:00.000Z",
+      "created_by_ref": "identity--f99f97bf-febe-59b8-a62f-f371ce965d3b",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--d880c2c7-1596-5bc3-ac89-28fdfcd59c3b",
+      "target_ref": "malware--33272406-b5f6-5c3c-85e8-f3900b99dcd3"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--21871a74-c677-5ac7-9cba-01e1a37dfab6",
+      "spec_version": "2.1",
+      "created": "2026-11-24T00:00:00.000Z",
+      "modified": "2026-11-24T00:00:00.000Z",
+      "created_by_ref": "identity--f99f97bf-febe-59b8-a62f-f371ce965d3b",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--d880c2c7-1596-5bc3-ac89-28fdfcd59c3b",
+      "target_ref": "infrastructure--7f12f652-8648-52ce-b971-06dfe3c7c744"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--7a0d0ef0-93ca-5c33-bd8f-d4d74e9a394a",
+      "spec_version": "2.1",
+      "created": "2026-11-24T00:00:00.000Z",
+      "modified": "2026-11-24T00:00:00.000Z",
+      "created_by_ref": "identity--f99f97bf-febe-59b8-a62f-f371ce965d3b",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--b0c8c120-1e2a-57af-bc38-cf2e13eaf8da",
+      "target_ref": "malware--33272406-b5f6-5c3c-85e8-f3900b99dcd3"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--738c582b-6830-5ba6-be4d-3299a8d73743",
+      "spec_version": "2.1",
+      "created": "2026-11-24T00:00:00.000Z",
+      "modified": "2026-11-24T00:00:00.000Z",
+      "created_by_ref": "identity--f99f97bf-febe-59b8-a62f-f371ce965d3b",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--a293a77d-038e-5487-a07e-76831a76d41d",
+      "target_ref": "malware--33272406-b5f6-5c3c-85e8-f3900b99dcd3"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a8f8466d-adcd-5282-8bc5-cd180ec1ad33",
+      "spec_version": "2.1",
+      "created": "2026-11-24T00:00:00.000Z",
+      "modified": "2026-11-24T00:00:00.000Z",
+      "created_by_ref": "identity--f99f97bf-febe-59b8-a62f-f371ce965d3b",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--77c02400-2251-5669-84bd-a6ae77f84e25",
+      "target_ref": "malware--33272406-b5f6-5c3c-85e8-f3900b99dcd3"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f5cc73f3-93d9-51b7-a797-54b8b734db86",
+      "spec_version": "2.1",
+      "created": "2026-11-24T00:00:00.000Z",
+      "modified": "2026-11-24T00:00:00.000Z",
+      "created_by_ref": "identity--f99f97bf-febe-59b8-a62f-f371ce965d3b",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--0c9825ee-8496-553c-aeb4-aed6b11f7efb",
+      "target_ref": "malware--33272406-b5f6-5c3c-85e8-f3900b99dcd3"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--deb72823-5137-5419-8dd0-c99738afa729",
+      "spec_version": "2.1",
+      "created": "2026-11-24T00:00:00.000Z",
+      "modified": "2026-11-24T00:00:00.000Z",
+      "created_by_ref": "identity--f99f97bf-febe-59b8-a62f-f371ce965d3b",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--21961558-d8d3-5570-a071-f0f96fa68fc7",
+      "target_ref": "malware--33272406-b5f6-5c3c-85e8-f3900b99dcd3"
+    }
+  ]
+}

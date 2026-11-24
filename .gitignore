@@ -1,0 +1,16 @@
+# Never commit captures, archives, samples or decoded payloads
+*.pcap
+*.pcapng
+*.zip
+*.exe
+*.dll
+*.mp4
+quarantine/
+payloads/
+
+# Local tooling noise
+__pycache__/
+*.pyc
+.venv/
+.DS_Store
+sigma-out/

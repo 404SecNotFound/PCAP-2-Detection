@@ -1,0 +1,32 @@
+{
+  "case": "2026-11-16-clickfix-netsupport",
+  "note": "Measured offline by DJR. Capture by Brad Duncan, malware-traffic-analysis.net. Inputs are never stored in this repository.",
+  "pcap": {
+    "sha256": "30ab1b26b358314ad7e37f084765dd14aabcea85ef65dc716c41cb635ad90498",
+    "size_bytes": 30017024
+  },
+  "suricata": {
+    "rules": "detections/suricata/clickfix_netsupport.rules",
+    "alerts_by_sid": {
+      "9260001": 320,
+      "9260002": 1,
+      "9260003": 1,
+      "9260004": 1
+    }
+  },
+  "yara": {
+    "rules": "detections/yara/mp4_carrier.yar",
+    "targets": [
+      {
+        "name": "0909.mp4",
+        "sha256": "b5db2a004d8d90119add09c3ab222bf14b7207cf3cafe9d0e239453cc4f953e4",
+        "rules_matched": 2
+      },
+      {
+        "name": "stage-2 PowerShell",
+        "sha256": "5df712fea72f3c1ccb7847fa683eb62651d4fa78158a1059d654c9ee9b8e72d4",
+        "rules_matched": 0
+      }
+    ]
+  }
+}

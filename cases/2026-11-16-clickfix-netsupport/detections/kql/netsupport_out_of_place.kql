@@ -1,0 +1,4 @@
+// netsupport_out_of_place.kql
+DeviceProcessEvents
+| where ProcessVersionInfoOriginalFileName =~ "client32.exe"
+| where FolderPath !startswith @"C:\Program Files"
