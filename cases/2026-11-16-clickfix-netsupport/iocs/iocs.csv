@@ -1,0 +1,29 @@
+# Machine-readable feed. value_raw holds LIVE indicators, do not click. value_defanged is safe to read. Source capture by Brad Duncan, malware-traffic-analysis.net. Licence CC BY 4.0.
+type,value_defanged,value_raw,role,first_seen_utc,evidence,confidence
+domain,crownherliving[.]com,crownherliving.com,compromised site that starts the chain,2026-11-16T21:57:41.465Z,PCAP,medium
+ipv4,66.223.49[.]89,66.223.49.89,compromised site address,2026-11-16T21:57:41.465Z,PCAP,low
+domain,bronkbuilder-website-assets.s3.us-east-2.amazonaws[.]com,bronkbuilder-website-assets.s3.us-east-2.amazonaws.com,asset loaded by the compromised site,2026-11-16T21:57:42.561Z,PCAP,low
+domain,wuntred[.]com,wuntred.com,injected script host,2026-11-16T21:57:42.715Z,PCAP,high
+ipv4,172.67.165[.]144,172.67.165.144,injected script host address (shared CDN range),2026-11-16T21:57:42.715Z,PCAP,low
+ipv4,104.21.42[.]198,104.21.42.198,injected script host address (shared CDN range),2026-11-16T21:57:42.715Z,PCAP,low
+domain,adsmanagertgo[.]click,adsmanagertgo.click,lure loader kyc2.js host,2026-11-16T21:57:43.325Z,PCAP,high
+ipv4,104.21.45[.]172,104.21.45.172,lure loader address (shared CDN range),2026-11-16T21:57:43.325Z,PCAP,low
+ipv4,172.67.217[.]8,172.67.217.8,lure loader address (shared CDN range),2026-11-16T21:57:43.325Z,PCAP,low
+domain,adsmanagerast[.]pro,adsmanagerast.pro,fake CAPTCHA backend and click check-in host,2026-11-16T21:57:44.247Z,PCAP,high
+ipv4,104.21.35[.]159,104.21.35.159,fake CAPTCHA backend address (shared CDN range),2026-11-16T21:57:44.247Z,PCAP,low
+ipv4,172.67.177[.]159,172.67.177.159,fake CAPTCHA backend address (shared CDN range),2026-11-16T21:57:44.247Z,PCAP,low
+domain,anycheckgocap[.]com,anycheckgocap.com,stage-2 PowerShell host,2026-11-16T21:59:33.709Z,PCAP,high
+url,hxxp://anycheckgocap[.]com/,http://anycheckgocap.com/,stage-2 PowerShell download,2026-11-16T21:59:33.709Z,PCAP,high
+ipv4,94.26.0[.]162,94.26.0.162,payload server for stage 2 and the MP4 carrier,2026-11-16T21:59:33.709Z,PCAP,high
+url,hxxp://94.26.0[.]162/0909.mp4,http://94.26.0.162/0909.mp4,MP4 carrier download,2026-11-16T21:59:38.329Z,PCAP,high
+domain,dasiiiitt[.]com,dasiiiitt.com,NetSupport primary gateway,2026-11-16T21:59:42.758Z,PCAP,high
+ipv4,93.152.209[.]36,93.152.209.36,NetSupport C2 gateway on port 443 without TLS,2026-11-16T21:59:42.986Z,PCAP,high
+url,hxxp://93.152.209[.]36:443/fakeurl.htm,http://93.152.209.36:443/fakeurl.htm,NetSupport check-in URL,2026-11-16T21:59:42.986Z,PCAP,high
+domain,piuifoasf[.]com,piuifoasf.com,NetSupport secondary gateway (not contacted),,Decoded,medium
+user-agent,NetSupport Manager/1.3,NetSupport Manager/1.3,NetSupport client check-in User-Agent,2026-11-16T21:59:42.986Z,PCAP,high
+http-server-header,NetSupport Gateway/1.92 (Windows NT),NetSupport Gateway/1.92 (Windows NT),NetSupport gateway Server header,2026-11-16T21:59:42.986Z,PCAP,high
+sha256,5df712fea72f3c1ccb7847fa683eb62651d4fa78158a1059d654c9ee9b8e72d4,5df712fea72f3c1ccb7847fa683eb62651d4fa78158a1059d654c9ee9b8e72d4,stage-2 PowerShell script,2026-11-16T21:59:33.709Z,Decoded,high
+sha256,b5db2a004d8d90119add09c3ab222bf14b7207cf3cafe9d0e239453cc4f953e4,b5db2a004d8d90119add09c3ab222bf14b7207cf3cafe9d0e239453cc4f953e4,0909.mp4 carrier,2026-11-16T21:59:38.329Z,Decoded,high
+sha256,275e5b085534f64313b50cbdcb08ecd59c57d21c96bb937f140ee92a3d27f792,275e5b085534f64313b50cbdcb08ecd59c57d21c96bb937f140ee92a3d27f792,MIseN.Exe renamed client32.exe,,Decoded,medium
+sha256,939ccc8c10168155012e3fc9b1562423aee5c42fab483c10deb49197ab112133,939ccc8c10168155012e3fc9b1562423aee5c42fab483c10deb49197ab112133,LHQPT.iNI client32.ini for this campaign,,Decoded,high
+sha256,e09980d1b1c508eb29d2931ac92f8d0a7e49ca5fe6ab6277fabf097a0b033b63,e09980d1b1c508eb29d2931ac92f8d0a7e49ca5fe6ab6277fabf097a0b033b63,nsm.lic licensee NSM1234,,Decoded,medium

@@ -1,0 +1,28 @@
+# 2026-11-16 ClickFix pushes NetSupport RAT. SHA256 hashes.
+# Personal research by DJR (404SecurityNotFound). Views and rules are my own and do not represent my employer.
+# Capture and exercise by Brad Duncan, https://www.malware-traffic-analysis.net/2026/11/16/index.html
+#
+# Most DLLs below are genuine NetSupport Manager components. Treat them as hunting
+# context, not block-list material. Blocking them may break legitimate NetSupport use.
+#
+# Columns: sha256  size_bytes  name  note
+
+# Capture (link only, never redistributed)
+30ab1b26b358314ad7e37f084765dd14aabcea85ef65dc716c41cb635ad90498  30017024  2026-11-16 capture  PCAP from the source page
+
+# Delivery chain
+5df712fea72f3c1ccb7847fa683eb62651d4fa78158a1059d654c9ee9b8e72d4  16043  stage-2 PowerShell  from anycheckgocap[.]com
+b5db2a004d8d90119add09c3ab222bf14b7207cf3cafe9d0e239453cc4f953e4  6045332  0909.mp4  MP4 carrier with uuid payload box
+
+# NetSupport package decoded from host.py
+275e5b085534f64313b50cbdcb08ecd59c57d21c96bb937f140ee92a3d27f792  34288  MIseN.Exe  renamed client32.exe
+63aa18c32af7144156e7ee2d5ba0fa4f5872a7deb56894f6f96505cbc9afe6f8  3735416  pciCl32.dll  NetSupport component, context only
+6562585009f15155eea9a489e474cebc4dd2a01a26d846fdd1b93fdc24b0c269  323912  htCTL32.dll  NetSupport component, context only
+6ffe12cdfe0a36dec4b4a40ecdafb4097b1af7c340b0fcecf9f5c67b7fa8b299  387400  tcCtl32.dll  NetSupport component, context only
+5e6089839b18e87494fc956e9aaf9476a1d82ae5b075457c3c103ac29c172110  63856  remcmdstub.exe  NetSupport component, context only
+939ccc8c10168155012e3fc9b1562423aee5c42fab483c10deb49197ab112133  907  LHQPT.iNI  client32.ini for this campaign
+e09980d1b1c508eb29d2931ac92f8d0a7e49ca5fe6ab6277fabf097a0b033b63  251  nsm.lic  licensee NSM1234
+2dfdc169dfc27462adc98dde39306de8d0526dcf4577a1a486c2eef447300689  108944  PciCAPI.dll  NetSupport component, context only
+0cff893b1e7716d09fb74b7a0313b78a09f3f48c586d31fc5f830bd72ce8331f  14664  PciChek.dll  NetSupport component, context only
+2cc8ebea55c06981625397b04575ed0eaad9bb9f9dc896355c011a62febe49b5  89416  AudioCapture.dll  NetSupport component, context only
+8793353461826fbd48f25ea8b835be204b758ce7510db2af631b28850355bd18  773968  MsVCR100.dll  Microsoft runtime, context only

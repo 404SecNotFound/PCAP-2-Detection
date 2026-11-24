@@ -1,0 +1,102 @@
+{
+  "name": "2026-11-16 ClickFix pushes NetSupport RAT",
+  "versions": {
+    "layer": "4.5",
+    "navigator": "5.1.0"
+  },
+  "domain": "enterprise-attack",
+  "description": "404SecurityNotFound PCAP to Detection case 2026-11-16. Score 3 tested rule, 2 untested Sigma or SIEM logic, 1 context only. Capture and exercise by Brad Duncan, malware-traffic-analysis.net.",
+  "techniques": [
+    {
+      "techniqueID": "T1189",
+      "score": 1,
+      "comment": "Stage 1 Site. Context only. Domain and proxy IOCs for wuntred[.]com, no behavioural rule.",
+      "enabled": true
+    },
+    {
+      "techniqueID": "T1204.004",
+      "score": 2,
+      "comment": "Stages 2 and 3 Lure and Paste. UC-01, clickfix_runbox.kql and Sigma Run-box rule. Not yet tested against host telemetry.",
+      "enabled": true
+    },
+    {
+      "techniqueID": "T1059.001",
+      "score": 2,
+      "comment": "Stages 3 and 4 Paste and PowerShell. UC-01 and UC-02 (4104 script block). Untested SIEM and Sigma logic.",
+      "enabled": true
+    },
+    {
+      "techniqueID": "T1027",
+      "score": 2,
+      "comment": "Stages 3 and 4. Get-Command name resolution and XOR strings. UC-02. Untested SIEM logic.",
+      "enabled": true
+    },
+    {
+      "techniqueID": "T1105",
+      "score": 2,
+      "comment": "Stages 4 to 6. Python zip and MP4 downloads. UC-03 and UC-04. TODO confirm which Suricata sids 9260002 to 9260004 cover this, then raise to 3.",
+      "enabled": true
+    },
+    {
+      "techniqueID": "T1059.006",
+      "score": 2,
+      "comment": "Stage 5 Python. Embedded python.exe from AppData\\Local\\.<hex>\\py-embed. UC-03. Untested SIEM logic.",
+      "enabled": true
+    },
+    {
+      "techniqueID": "T1027.003",
+      "score": 3,
+      "comment": "Stage 6 MP4. Payload hidden in an MP4 uuid box. Both YARA rules in mp4_carrier.yar match 0909.mp4 and neither matches the stage-2 script. Tested.",
+      "enabled": true
+    },
+    {
+      "techniqueID": "T1219",
+      "score": 3,
+      "comment": "Stage 7 C2. NetSupport RAT. Suricata sid 9260001 fired 320 times against the capture, matching the 320 check-ins (mapping is inference until the rule file is in the repo). Also UC-05.",
+      "enabled": true
+    },
+    {
+      "techniqueID": "T1571",
+      "score": 3,
+      "comment": "Stage 7 C2. Plain HTTP on port 443. Suricata sid 9260001 (same caveat as T1219) and UC-05.",
+      "enabled": true
+    },
+    {
+      "techniqueID": "T1036.003",
+      "score": 2,
+      "comment": "Stage 7. client32.exe renamed MIseN.Exe. netsupport_out_of_place.kql and UC-06. Untested.",
+      "enabled": true
+    },
+    {
+      "techniqueID": "T1547.001",
+      "score": 2,
+      "comment": "Stage 8 Dwell. Startup .vbs run by wscript.exe //B and HKCU Run values. UC-06 and Sigma. Untested.",
+      "enabled": true
+    }
+  ],
+  "gradient": {
+    "colors": [
+      "#fde0dd",
+      "#fa9fb5",
+      "#c51b8a"
+    ],
+    "minValue": 1,
+    "maxValue": 3
+  },
+  "legendItems": [
+    {
+      "label": "3 tested rule",
+      "color": "#c51b8a"
+    },
+    {
+      "label": "2 untested Sigma or SIEM logic",
+      "color": "#fa9fb5"
+    },
+    {
+      "label": "1 context only",
+      "color": "#fde0dd"
+    }
+  ],
+  "showTacticRowBackground": false,
+  "selectTechniquesAcrossTactics": true
+}

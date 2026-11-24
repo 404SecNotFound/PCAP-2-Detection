@@ -1,0 +1,124 @@
+name: validate
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  sigma:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install sigma-cli and backends
+        # pysigma-backend-kusto is the maintained successor of the Microsoft 365 Defender backend
+        run: pip install sigma-cli pysigma-backend-splunk pysigma-backend-elasticsearch pysigma-backend-kusto
+      - name: Check and convert
+        run: |
+          shopt -s nullglob globstar
+          files=(cases/**/detections/sigma/*.yml)
+          if [ ${#files[@]} -eq 0 ]; then echo "no Sigma files"; exit 0; fi
+          sigma check "${files[@]}"
+          mkdir -p sigma-out
+          for f in "${files[@]}"; do
+            n=$(basename "$f" .yml)
+            sigma convert -t splunk --without-pipeline "$f" > "sigma-out/$n.splunk.txt"
+            sigma convert -t lucene --without-pipeline "$f" > "sigma-out/$n.elasticsearch.txt"
+            sigma convert -t kusto -p microsoft_xdr "$f" > "sigma-out/$n.defender.kql"
+          done
+      - uses: actions/upload-artifact@v4
+        with:
+          name: sigma-conversions
+          path: sigma-out/
+          if-no-files-found: ignore
+
+  yara:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install yara-python
+      - name: Compile every .yar
+        run: |
+          python - <<'EOF'
+          import glob, sys, yara
+          files = glob.glob("cases/**/*.yar", recursive=True)
+          for f in files:
+              yara.compile(filepath=f)
+              print("compiled", f)
+          print(len(files), "YARA files OK")
+          EOF
+
+  suricata:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt-get update && sudo apt-get install -y suricata
+      - name: suricata -T on each rules file
+        run: |
+          shopt -s nullglob globstar
+          for r in cases/**/detections/suricata/*.rules; do
+            conf="$(dirname "$r")/../../tests/suricata-minimal.yaml"
+            echo "testing $r"
+            suricata -T -c "$conf" -S "$r" -l /tmp
+          done
+
+  stix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install stix2-validator
+      - name: Validate bundles
+        run: |
+          shopt -s nullglob globstar
+          for f in cases/**/iocs/iocs.stix.json; do stix2_validator "$f"; done
+      - name: Bundles are reproducible from iocs.csv
+        run: |
+          for d in cases/*/; do [ -f "$d/iocs/iocs.csv" ] && python tools/build_stix.py "$d"; done
+          git diff --exit-code -- 'cases/*/iocs/iocs.stix.json'
+
+  json:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Layer and expected-alerts keys
+        run: |
+          python3 - <<'EOF'
+          import glob, json
+          for f in glob.glob("cases/*/attack-layer.json"):
+              d = json.load(open(f))
+              assert d["domain"] == "enterprise-attack", f
+              for t in d["techniques"]:
+                  assert {"techniqueID", "score", "comment"} <= t.keys(), f
+                  assert t["score"] in (1, 2, 3), f
+              print("ok", f)
+          for f in glob.glob("cases/*/tests/expected-alerts.json"):
+              d = json.load(open(f))
+              assert {"case", "pcap", "suricata", "yara"} <= d.keys(), f
+              assert d["suricata"]["alerts_by_sid"] and d["yara"]["targets"], f
+              print("ok", f)
+          EOF
+      - name: Decoder self-test
+        run: python3 tools/decode_mp4_carrier.py --selftest
+
+  hygiene:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: No samples or captures
+        run: |
+          bad=$(git ls-files | grep -iE '\.(pcap|pcapng|zip|exe|dll|mp4)$' || true)
+          if [ -n "$bad" ]; then echo "forbidden files:"; echo "$bad"; exit 1; fi
+      - name: No em dashes in Markdown
+        run: |
+          if git ls-files '*.md' | xargs grep -n $'—'; then echo "em dash found"; exit 1; fi

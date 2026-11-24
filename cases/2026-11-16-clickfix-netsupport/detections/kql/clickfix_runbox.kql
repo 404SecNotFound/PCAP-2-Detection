@@ -1,0 +1,6 @@
+// clickfix_runbox.kql
+DeviceProcessEvents
+| where InitiatingProcessFileName =~ "explorer.exe"
+| where FileName in~ ("powershell.exe", "pwsh.exe", "mshta.exe")
+| where ProcessCommandLine has_any ("Get-Command", "irm", "iwr", "http")
+| where ProcessCommandLine has_any ("iex", "Invoke-Expression", "|&")
